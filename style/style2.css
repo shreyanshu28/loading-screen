@@ -221,3 +221,229 @@ a {
   left: 2px;
   border-radius: 50%;
 }
+
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+  }
+
+  body {
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+  }
+
+  main {
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+  }
+
+  div {
+    /* originally width height 4 4 */
+    width: 10%;
+    height: 5%;
+    /* animation:  2s infinite alternate; */
+    margin-right: 10%;
+  }
+
+  p {
+    visibility: hidden;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 20%;
+  }
+
+  a {
+    text-decoration: none;
+    color: orange;
+    font-size: 20px;
+  }
+
+  @keyframes red-box {
+    0% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transform: translate(200%, 500%);
+    }
+    60% {
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+      transform: translate(200%, 400%);
+    }
+    100% {
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+      transform: translate(200%, 500%);
+    }
+  }
+
+  @keyframes blue-box {
+    0% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transform: translate(200%, 500%);
+    }
+
+    20% {
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+      transform: translate(200%, 450%);
+    }
+    40% {
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+      transform: translate(200%, 420%);
+    }
+    60% {
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+      transform: translate(200%, 400%);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transform: translate(200%, 500%);
+    }
+  }
+
+  @keyframes green-box {
+    0% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transform: translate(200%, 500%);
+    }
+
+    40% {
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+      transform: translate(200%, 440%);
+    }
+    70% {
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+      transform: translate(200%, 440%);
+    }
+
+    100% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transform: translate(200%, 500%);
+    }
+  }
+
+  @keyframes orange-box {
+    0% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transform: translate(200%, 500%);
+    }
+
+    65% {
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+      transform: translate(200%, 400%);
+    }
+    100% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transform: translate(200%, 500%);
+    }
+  }
+
+  @keyframes pink-box {
+    0% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transform: translate(200%, 500%);
+    }
+
+    50% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      transform: translate(200%, 400%);
+    }
+
+    100% {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      transform: translate(200%, 500%);
+    }
+  }
+
+  .ease {
+    background-color: rgb(223, 77, 77);
+    animation: red-box 2s infinite alternate;
+  }
+
+  .linear {
+    background-color: rgb(114, 114, 241);
+    animation: blue-box 2s infinite alternate;
+  }
+
+  .ease-in {
+    background-color: springgreen;
+    animation: green-box 2s infinite alternate;
+  }
+
+  .ease-out {
+    background-color: rgb(238, 111, 65);
+    animation: orange-box 2s infinite alternate;
+  }
+
+  .ease-in-out {
+    background-color: orchid;
+    animation: pink-box 2s infinite alternate;
+  }
+
+  .shown {
+    visibility: visible;
+    /* text-align: center; */
+    font-size: 25px;
+  }
+
+  [data-theme="dark"] {
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    background-color: rgb(8, 1, 39);
+    color: blanchedalmond;
+  }
+
+  .check {
+    margin-top: 120%;
+    margin-left: 35%;
+
+    /* width: 70px; */
+    /* display: flex;z
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 30px;  */
+  }
+
+  .switch-input {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .switch-input:checked + .switch-label .ball {
+    transform: translateX(24px);
+  }
+
+  .switch-label {
+    height: 26px;
+    width: 50px;
+    background-color: #2e2848;
+    display: flex;
+    border-radius: 50px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .fa-moon {
+    padding-left: 5px;
+    color: #f1c40f;
+  }
+
+  .fa-sun {
+    padding-right: 5px;
+    color: #f39c12;
+  }
+
+  .ball {
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    background-color: #ffffff;
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+  }
+}
